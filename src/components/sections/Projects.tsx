@@ -43,6 +43,12 @@ const projects = [
     size: 'small',
     offset: true,
   },
+  {
+    id: 7, title: 'Weldor Digital Platform', category: '/Industrial / B2B Manufacturing',
+    link: 'https://weldor-digital-platform.vercel.app/',
+    image: '/projects/weldor.png',
+    size: 'small',
+  },
 ];
 
 export default function Projects() {

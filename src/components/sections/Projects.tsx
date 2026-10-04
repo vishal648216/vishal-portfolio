@@ -37,8 +37,9 @@ const projects = [
     size: 'large',
   },
   {
-    id: 6, title: 'Visa Consultants', category: '/PHP / Web',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=700&auto=format&fit=crop',
+    id: 6, title: 'IQ News', category: '/News & Media Portal / Web App',
+    link: 'https://news.inqtube.com/en',
+    image: '/projects/iqnews.png',
     size: 'small',
     offset: true,
   },

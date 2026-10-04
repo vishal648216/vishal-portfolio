@@ -8,53 +8,41 @@ const projects = [
     id: 1, title: 'Dominant Pharma', category: '/Pharmaceutical / Healthcare Portal',
     link: 'https://dominantpharma.in/',
     image: '/projects/dominantpharma.png',
-    size: 'large',
   },
   {
     id: 2, title: 'Buyer Seller Platform', category: '/B2B Marketplace / Web App',
     link: 'https://buyersellerplatform.com/',
     image: '/projects/buyerseller.png',
-    size: 'small',
-    offset: true,
   },
   {
     id: 3, title: 'MTC Global Steel', category: '/Industrial / Steel Stockist',
     link: 'https://mtcglobalsteel.com/',
     image: '/projects/mtcglobalsteel.png',
-    size: 'small',
   },
   {
     id: 4, title: 'Maia Homes', category: '/E-Commerce / Home Decor',
     link: 'https://maiahomes.com/',
     image: '/projects/maiahomes.png',
-    size: 'large',
-    offset: true,
   },
   {
     id: 5, title: 'Mannat Rugs', category: '/E-Commerce / Designer Rugs',
     link: 'https://mannatrugs.com/',
     image: '/projects/mannatrugs.png',
-    size: 'large',
   },
   {
     id: 6, title: 'Sellitfast', category: '/ReCommerce / Electronics',
     link: 'https://sellitfast.in/',
     image: '/projects/sellitfast.png',
-    size: 'small',
-    offset: true,
   },
   {
     id: 7, title: 'IQ News', category: '/News & Media Portal / Web App',
     link: 'https://news.inqtube.com/en',
     image: '/projects/iqnews.png',
-    size: 'small',
   },
   {
     id: 8, title: 'Weldor Digital Platform', category: '/Industrial / B2B Manufacturing',
     link: 'https://weldor-digital-platform.vercel.app/',
     image: '/projects/weldor.png',
-    size: 'large',
-    offset: true,
   },
 ];
 
@@ -90,11 +78,11 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-0 items-start">
+        {/* 2-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
 
           {/* Left column */}
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-8 md:gap-10">
             {projects.filter((_, i) => i % 2 === 0).map((proj, i) => (
               <a
                 key={proj.id}
@@ -107,13 +95,11 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 60 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.7, delay: 0.1 + i * 0.12 }}
-                  className={`group cursor-none relative overflow-hidden ${proj.offset ? 'mt-16' : ''}`}
+                  className="group cursor-none relative overflow-hidden"
                   style={{ border: '1px solid rgba(255,255,255,0.06)' }}
                   data-hover
                 >
-                  <div
-                    className={`w-full overflow-hidden ${proj.size === 'large' ? 'h-[340px]' : 'h-[220px]'}`}
-                  >
+                  <div className="w-full overflow-hidden h-[260px] sm:h-[320px] md:h-[360px] lg:h-[400px]">
                     <img
                       src={proj.image}
                       alt={`${proj.title} - ${proj.category} Portfolio Project by Vishal Khanapara`}
@@ -156,7 +142,7 @@ export default function Projects() {
           </div>
 
           {/* Right column */}
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-8 md:gap-10">
             {projects.filter((_, i) => i % 2 !== 0).map((proj, i) => (
               <a
                 key={proj.id}
@@ -169,13 +155,11 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 60 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.7, delay: 0.2 + i * 0.12 }}
-                  className={`group cursor-none relative overflow-hidden ${proj.offset ? 'mt-16' : ''}`}
+                  className="group cursor-none relative overflow-hidden"
                   style={{ border: '1px solid rgba(255,255,255,0.06)' }}
                   data-hover
                 >
-                  <div
-                    className={`w-full overflow-hidden ${proj.size === 'large' ? 'h-[340px]' : 'h-[220px]'}`}
-                  >
+                  <div className="w-full overflow-hidden h-[260px] sm:h-[320px] md:h-[360px] lg:h-[400px]">
                     <img
                       src={proj.image}
                       alt={`${proj.title} - ${proj.category} Portfolio Project by Vishal Khanapara`}

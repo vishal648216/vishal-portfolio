@@ -5,49 +5,56 @@ import { motion, useInView } from 'framer-motion';
 
 const projects = [
   {
-    id: 1, title: 'Buyer Seller Platform', category: '/B2B Marketplace / Web App',
-    link: 'https://buyersellerplatform.com/',
-    image: '/projects/buyerseller.png',
+    id: 1, title: 'Dominant Pharma', category: '/Pharmaceutical / Healthcare Portal',
+    link: 'https://dominantpharma.in/',
+    image: '/projects/dominantpharma.png',
     size: 'large',
   },
   {
-    id: 2, title: 'MTC Global Steel', category: '/Industrial / Steel Stockist',
+    id: 2, title: 'Buyer Seller Platform', category: '/B2B Marketplace / Web App',
+    link: 'https://buyersellerplatform.com/',
+    image: '/projects/buyerseller.png',
+    size: 'small',
+    offset: true,
+  },
+  {
+    id: 3, title: 'MTC Global Steel', category: '/Industrial / Steel Stockist',
     link: 'https://mtcglobalsteel.com/',
     image: '/projects/mtcglobalsteel.png',
     size: 'small',
+  },
+  {
+    id: 4, title: 'Maia Homes', category: '/E-Commerce / Home Decor',
+    link: 'https://maiahomes.com/',
+    image: '/projects/maiahomes.png',
+    size: 'large',
     offset: true,
   },
   {
-    id: 3, title: 'Maia Homes', category: '/E-Commerce / Home Decor',
-    link: 'https://maiahomes.com/',
-    image: '/projects/maiahomes.png',
-    size: 'small',
-  },
-  {
-    id: 4, title: 'Mannat Rugs', category: '/E-Commerce / Designer Rugs',
+    id: 5, title: 'Mannat Rugs', category: '/E-Commerce / Designer Rugs',
     link: 'https://mannatrugs.com/',
     image: '/projects/mannatrugs.png',
     size: 'large',
+  },
+  {
+    id: 6, title: 'Sellitfast', category: '/ReCommerce / Electronics',
+    link: 'https://sellitfast.in/',
+    image: '/projects/sellitfast.png',
+    size: 'small',
     offset: true,
   },
   {
-    id: 5, title: 'Sellitfast', category: '/ReCommerce / Electronics',
-    link: 'https://sellitfast.in/',
-    image: '/projects/sellitfast.png',
-    size: 'large',
-  },
-  {
-    id: 6, title: 'IQ News', category: '/News & Media Portal / Web App',
+    id: 7, title: 'IQ News', category: '/News & Media Portal / Web App',
     link: 'https://news.inqtube.com/en',
     image: '/projects/iqnews.png',
     size: 'small',
-    offset: true,
   },
   {
-    id: 7, title: 'Weldor Digital Platform', category: '/Industrial / B2B Manufacturing',
+    id: 8, title: 'Weldor Digital Platform', category: '/Industrial / B2B Manufacturing',
     link: 'https://weldor-digital-platform.vercel.app/',
     image: '/projects/weldor.png',
-    size: 'small',
+    size: 'large',
+    offset: true,
   },
 ];
 

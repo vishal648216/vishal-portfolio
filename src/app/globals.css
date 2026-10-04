@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* ── Teal Premium Palette (from reference image) ── */
+    --bg:        #EDF4F4;
+    --bg-2:      #E2EFEF;
+    --bg-3:      #D6EAEA;
+    --surface:   rgba(13, 75, 75, 0.06);
+    --surface-2: rgba(13, 75, 75, 0.10);
+    --border:    rgba(13, 75, 75, 0.12);
+    --border-2:  rgba(13, 75, 75, 0.20);
+    --accent:    #0D9488;        /* Primary teal */
+    --accent-2:  #0A7A70;        /* Darker teal for hover */
+    --accent-light: #CCEEEB;     /* Light teal for subtle bg */
+    --dark:      #0B2B2B;        /* Very dark teal (text headings) */
+    --muted:     rgba(11, 43, 43, 0.45);
+    --dim:       rgba(11, 43, 43, 0.12);
+    --white:     #ffffff;
+    --black:     #0B2B2B;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    overflow-x: hidden;
+    cursor: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      cursor: none;
+    }
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+  /* Hide horizontal scrollbar */
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* ── Glass card ── */
+  .glass {
+    background: rgba(255,255,255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(13, 148, 136, 0.15);
+  }
+
+  .glass-hover {
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .glass-hover:hover {
+    background: rgba(255,255,255, 0.75);
+    border-color: rgba(13, 148, 136, 0.3);
+    box-shadow: 0 4px 30px rgba(13, 148, 136, 0.08);
+  }
+
+  /* ── Subtle grid lines ── */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(13,75,75,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13,75,75,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  /* ── Star decorator ── */
+  .star-white::before {
+    content: '✦';
+    color: var(--accent);
+    margin-right: 6px;
+    font-size: 10px;
+  }
+
+  /* ── Glow on hover ── */
+  .btn-glow {
+    transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+  }
+  .btn-glow:hover {
+    box-shadow: 0 0 30px rgba(13,148,136,0.25);
+  }
+
+  /* ── Gradient text ── */
+  .text-gradient {
+    background: linear-gradient(135deg, #0D9488 0%, #0B5E5A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
